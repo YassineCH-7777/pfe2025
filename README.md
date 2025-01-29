@@ -16,7 +16,7 @@ Optimisation de Découpe Intelligente / Smart Cutting Optimization
             venv\Scripts\activate     # Windows
 
         # 3. Installer les dépendances
-            cd optimisation-decoupe/backend
+            cd pfe2025/backend
             pip install -r requirements.txt
 
         # 4. Configurer la base de données MySQL
@@ -37,7 +37,7 @@ Optimisation de Découpe Intelligente / Smart Cutting Optimization
                 'database': 'subscribers'
             }
         Démarrer l'API :
-            cd optimisation-decoupe/backend
+            cd pfe2025/backend
             python server.py
 
     📡 Utilisation de l'API / API Usage
@@ -65,7 +65,7 @@ Optimisation de Découpe Intelligente / Smart Cutting Optimization
         Entraîner le modèle :
             curl -X POST http://localhost:5000/api/train
             ou 
-                cd optimisation-decoupe/backend
+                cd pfe2025/backend
                 python train_dqn_model.py
 
     🛠 Dépendances Techniques / Tech Stack
