@@ -1,0 +1,91 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css");
+
+
+/*Animations*/
+[data-aos="fade-left"] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-right"] {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+[data-aos="fade-right"].aos-animate {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-top"] {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+[data-aos="fade-top"].aos-animate {
+  opacity: 1;
+  transform: translateY(-50px)
+}
+
+[data-aos="fade-buttom"] {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+[data-aos="fade-buttom"].aos-animate {
+  opacity: 1;
+  transform: translateY(-50px)
+}
+
+[data-aos="fade-in"] {
+  opacity: 0;
+}
+
+[data-aos="fade-in"].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-out"] {
+  opacity: 1;
+}
+
+[data-aos="fade-out"].aos-animate {
+  opacity: 0;
+}
+
+
+
+/*End Animations*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+
+.app {
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+

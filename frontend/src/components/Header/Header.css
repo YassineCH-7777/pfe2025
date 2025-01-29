@@ -1,0 +1,72 @@
+/* Style du header */
+header {
+  background: #4A3B2F;
+  display: flex;
+  justify-content: Space-between;
+  align-items: center;
+  height: 50px;
+  padding: opx 5%;
+  width: 100%;
+  z-index: 999;
+}
+
+header .logo a{
+  color: #B79166;
+  text-decoration: none;
+  font-size: 32px;
+  font-weight: 700;
+  margin-left: 50%;
+}
+
+header .logo a:hover{
+  color: white;
+}
+
+header nav {
+  display: flex;
+  justify-content: Space-between;
+  align-items: center;
+  list-style: none;
+  margin-right: 10%;
+}
+header nav a{
+  padding: 0px 20px;
+}
+nav .link {
+  text-decoration: none;
+  position: relative;
+}
+.link {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link::before {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: #8b5e3c;
+  transform-origin: right top;
+  transition: all 0.2s ease-out;
+}
+
+.link.active {
+  color: #8b5e3c;
+}
+
+.link.active::before {
+  width: 100%;
+}
+.link:hover::before{
+  width: 100%;
+}
+
+header nav a:hover{
+  color: #8b5e3c;
+}
