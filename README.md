@@ -7,8 +7,8 @@ Optimisation de Découpe Intelligente / Smart Cutting Optimization
             Bibliothèques Python : flask + flask-cors | scikit-learn | mysql-connector-python | joblib | tensorflow + numpy
 
         # 1. Cloner le dépôt
-            git clone https://github.com/votre-repo/optimisation-decoupe.git
-            cd optimisation-decoupe
+            git clone https://github.com/votre-repo/pfe2025.git
+            cd pfe2025
 
         # 2. Créer l'environnement virtuel
             python -m venv venv
