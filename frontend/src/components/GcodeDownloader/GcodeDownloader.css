@@ -1,20 +1,3 @@
-.gcode-downloader {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #e0e0e0;
-    text-align: center;
-  }
-  
-  .gcode-downloader button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .gcode-downloader button:hover {
-    background-color: #0056b3;
-  }
+version https://git-lfs.github.com/spec/v1
+oid sha256:157036b96fc35b60989e85b60a27757f75d5e684daf76de7b42ea930040c2480
+size 400
