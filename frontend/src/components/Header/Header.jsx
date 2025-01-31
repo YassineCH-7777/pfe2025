@@ -1,26 +1,3 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import './Header.css';
-
-const Header = () => {
-  return (
-    <header>
-      <div className="logo">
-        <NavLink to="/">OptimCut</NavLink>
-      </div>
-      <nav>
-        <NavLink to="/" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
-          Accueil
-        </NavLink>
-        <NavLink to="/optimise" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
-          Optimisation
-        </NavLink>
-        <NavLink to="/about" className={({ isActive }) => (isActive ? 'link active' : 'link')}>
-          À propos
-        </NavLink>
-      </nav>
-    </header>
-  );
-};
-
-export default Header;
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a5a82970137cbc26585de971af7309da2b1f07838056da85f564c2425e1c95f
+size 1334
