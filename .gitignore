@@ -4,3 +4,4 @@ frontend/venv/
 frontend/src/assets/txt.txt
 node_modules/
 backend/flask_session/
+backend\output\cutting_plan.gcode
