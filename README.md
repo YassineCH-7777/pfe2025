@@ -3,8 +3,7 @@ Optimisation de Découpe Intelligente / Smart Cutting Optimization
     🚀 Démarrage Rapide / Quick Start
         Prérequis / Requirements
             Python 3.8+
-            MySQL 8.0+
-            Bibliothèques Python : flask + flask-cors | scikit-learn | mysql-connector-python | joblib | tensorflow + numpy
+            Bibliothèques Python : flask + flask-cors | scikit-learn | joblib | tensorflow + numpy
 
         # 1. Cloner le dépôt
             git clone https://github.com/votre-repo/pfe2025.git
