@@ -5,7 +5,7 @@ Optimisation de Découpe de Bois en utilisant l'IA
             Bibliothèques Python : flask + flask-cors | scikit-learn | joblib | tensorflow + numpy
 
         # 1. Cloner le dépôt
-            git clone https://github.com/votre-repo/pfe2025.git
+            git clone https://github.com/YassineCH-7777/pfe2025.git
             cd pfe2025
 
     	# 2. Installer les dépendances
