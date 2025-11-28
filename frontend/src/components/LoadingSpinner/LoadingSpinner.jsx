@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9cbb836f6b936ba268d4c8be4ff46cafa637eb98460b9e841da33a7653f465ee
-size 423
+// src/components/LoadingSpinner/LoadingSpinner.jsx
+import React from 'react';
+import './LoadingSpinner.css';
+
+const LoadingSpinner = () => {
+  return (
+    <div className="loading-overlay">
+      <div className="loading-spinner">
+        <div className="loading-circle"></div>
+        <div className="loading-text">Chargement en cours...</div>
+      </div>
+    </div>
+  );
+};
+
+export default LoadingSpinner;

@@ -1,3 +1,305 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:5e477bec3f6ffe78b41c3349efd4361fd82db092a977186fc1e69c177055ed5a
-size 5531
+/* WoodDetailPage.css - Updated with gallery styles */
+.wood-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: #333;
+  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.wood-detail-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  border-radius: 10px;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  z-index: 900;
+}
+
+.wood-detail-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #B79166;
+  margin-bottom: 0.5rem;
+}
+
+.wood-detail-header p {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.wood-tagline {
+  font-size: 1.1rem;
+  color: #666;
+  font-style: italic;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wood-detail-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 600px;
+  background-color: #e67e22;
+}
+
+.wood-detail-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+@media (max-width: 900px) {
+  .wood-detail-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Updated gallery styles */
+.wood-gallery {
+  background-color: #F5F1EC;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 600px;
+  position: relative;
+}
+
+.wood-image-container {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.wood-image {
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  user-select: none;
+  transition: all 0.4s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  border: 8px solid white;
+}
+
+.wood-image:hover {
+  transform: scale(1.05) !important;
+  z-index: 100 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.refresh-gallery-btn {
+  background-color: #e67e22;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.refresh-gallery-btn:hover {
+  background-color: #d35400;
+}
+
+.refresh-gallery-btn:active {
+  transform: scale(0.98);
+}
+
+/* Rest of the CSS styles */
+.wood-information h2 {
+  font-size: 1.5rem;
+  color: #4A3B2F;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.wood-details {
+  margin-bottom: 2rem;
+}
+
+.wood-details p {
+  line-height: 1.7;
+}
+
+.wood-specs ul {
+  list-style: none;
+  padding: 0;
+}
+
+.wood-specs li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.wood-specs li:last-child {
+  border-bottom: none;
+}
+
+.wood-specs li strong {
+  display: inline-block;
+  width: 160px;
+  color: #B79166;
+  margin-bottom: 10px;
+}
+
+.uses-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.uses-list li {
+  background-color: #f9f9f9;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  border-left: 3px solid #e67e22;
+}
+
+.wood-maintenance {
+  margin-top: 2rem;
+  background-color: #fcf8e3;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 4px solid #f0ad4e;
+}
+
+.wood-maintenance h2 {
+  margin-top: 0;
+}
+
+.wood-maintenance p {
+  line-height: 1.6;
+}
+
+.wood-not-found {
+  text-align: center;
+  padding: 3rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.wood-not-found h1 {
+  color: #e74c3c;
+  margin-bottom: 1rem;
+}
+
+.wood-appearance {
+  margin-bottom: 2rem;
+}
+
+.appearance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .appearance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.appearance-item {
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 8px;
+  border-left: 3px solid #e67e22;
+}
+
+.appearance-item h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  color: #e67e22;
+}
+
+.appearance-item p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Styles for WoodPage preview details */
+.wood-preview-details {
+  margin: 1rem 0;
+  padding: 0.8rem;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.wood-preview-color, 
+.wood-preview-grain {
+  margin-bottom: 0.5rem;
+}
+
+.wood-preview-details .label {
+  font-weight: bold;
+  color: #7f8c8d;
+  margin-right: 0.5rem;
+}
+
+.wood-preview-details .value {
+  color: #2c3e50;
+}
+
+/* Aperçu des couleurs */
+.color-preview {
+  display: flex;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.color-sample {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Cercle pour l'aperçu */
+  border: 1px solid #ccc; /* Bordure légère pour contraste */
+  margin-left: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+}
+
+.color-sample:hover {
+  transform: scale(1.1); /* Zoom léger au survol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+/* Media query for responsive gallery */
+@media (max-width: 768px) {
+  .gallery-container {
+    min-height: 400px;
+  }
+  
+  .wood-image {
+    max-width: 80%;
+    border-width: 5px;
+  }
+  
+  .wood-image:hover {
+    transform: scale(1.03) !important;
+  }
+}

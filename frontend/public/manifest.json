@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e5cf54e55ff7cc1d8ce17ba309692ead3251ba753f3cd2b85dd3007056ff7c44
-size 795
+{
+  "short_name": "OptimCut",
+  "name": "OptimCut - Optimisation de Découpe Intelligente",
+  "description": "Solution IA d'optimisation de découpe de matériaux avec génération de G-code",
+  "categories": ["productivity", "engineering", "tools"],
+  "lang": "fr-FR",
+  "dir": "ltr",
+
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "theme_color": "#1a237e",
+  "background_color": "#ffffff",
+  "color_scheme": "light",
+
+  "icons": [
+    {
+      "src": "/icons/icon512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/icon192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icons/iconsvg.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

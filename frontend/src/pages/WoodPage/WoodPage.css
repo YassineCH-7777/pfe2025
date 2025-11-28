@@ -1,3 +1,90 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e17533dea09de7050688c3f589d1718c1e4c412cbe2d820d822b6092ee083a93
-size 2012
+.wood-pageMain {
+  padding: 20px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.wood-galleryMain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.wood-categoryMain {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.wood-categoryMain:hover {
+  transform: translateY(-10px);
+}
+
+.wood-imageMain {
+  width: 100%;
+  height: 200px;
+  cursor: pointer;
+  object-fit: cover; /* Recadrer l'image pour qu'elle remplisse le conteneur sans déformation */
+  border-radius: 8px; /* Coins arrondis pour correspondre au style général */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet visuel */
+}
+
+.wood-imageMain:hover {
+  transform: scale(1.05); /* Zoom léger au survol */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombre plus marquée au survol */
+}
+
+.wood-categoryMain h2 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #333;
+}
+
+.wood-categoryMain p {
+  font-size: 1rem;
+  margin: 10px;
+  color: #555;
+  display: -webkit-box;
+  line-clamp: 1;
+  -webkit-line-clamp: 1; /* Limiter à 2 lignes */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.wood-categoryMain button {
+  display: block;
+  width: calc(100% - 20px);
+  margin: 10px;
+  padding: 10px;
+  background-color: #8b5e3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.wood-categoryMain button:hover {
+  background-color: #B79166;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .wood-galleryMain {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .wood-galleryMain {
+    grid-template-columns: 1fr;
+  }
+}

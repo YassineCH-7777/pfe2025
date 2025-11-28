@@ -1,3 +1,19 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:58bffe06f85c4199a897248c744c81b89aef4d4a2aa387caf160dec229031ed5
-size 383
+/* Téléchargement */
+.download-button {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #4A3B2F;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.download-button:hover {
+  background-color: #634c3d;
+  transform: scale(1.05);
+}

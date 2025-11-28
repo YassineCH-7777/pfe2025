@@ -5,3 +5,16 @@ frontend/src/assets/txt.txt
 node_modules/
 backend/flask_session/
 backend/output/
+# Dépendances Node.js
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+env/
+backend/credentials.json
+# Fichiers système et logs
+.DS_Store
+*.log

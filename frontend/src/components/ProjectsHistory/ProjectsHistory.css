@@ -1,3 +1,122 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e0f9ed9decd670d328d1cd5abc7bfe8cc6e26660e061bae7d12a1d6195cc985d
-size 2621
+/* Container principal */
+.projects-history {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 32px;
+}
+
+/* Titre principal */
+.projects-history h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 32px;
+  font-weight: 600;
+  font-size: 24px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.projects-history h2:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px;
+  height: 3px;
+  background-color: #4A3B2F;
+  border-radius: 2px;
+}
+
+/* Conteneur de la liste de projets */
+.projects-list2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Grille responsive */
+  gap: 1.5rem; /* Espacement entre les cartes */
+  justify-content: center; /* Centrer les cartes */
+}
+
+/* Carte de projet */
+.project-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 300px;
+}
+
+/* Titre de la carte */
+.project-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #4A3B2F;
+}
+
+/* Détails du projet */
+.project-card p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+/* Lien vers les détails */
+.detaillink {
+  display: inline-block;
+  background-color: #4A3B2F;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover sur le lien */
+.detaillink:hover {
+  background-color: #8b5e3c;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Bouton de suppression */
+.delete-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  width: 32px;
+  height: 34px;
+}
+
+/* Hover sur le bouton de suppression */
+.delete-button:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive : adaptation sur petits écrans */
+@media (max-width: 768px) {
+  .detaillink,
+  .delete-button {
+    margin-left: 0;
+    margin-top: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+  .delete-button {
+    width: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:a680aaadeae229465c9a384d03f93aa33f308620a9c3890e190e2fb0aa16527f
-size 879
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-left: 200px;
+    background-color: white;
+    font-size: 1rem;
+    color: #4A3B2F; /* Couleur principale de la page d'accueil */
+  }
+  
+  .breadcrumb a {
+    color: #8b5e3c; /* Couleur des boutons de la page d'accueil */
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .breadcrumb a:hover {
+    color: #B79166; /* Couleur de survol des boutons de la page d'accueil */
+  }
+  
+  .breadcrumb span {
+    color: #6c757d;
+    margin-right: 10px;
+  }
+  
+  .breadcrumb a::after,
+  .breadcrumb span::after {
+    content: '>';
+    margin-left: 10px;
+    color: #6c757d;
+  }
+  
+  .breadcrumb a:last-child::after,
+  .breadcrumb span:last-child::after {
+    content: '';
+    margin-left: 0;
+  }

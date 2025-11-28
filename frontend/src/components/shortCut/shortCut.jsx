@@ -1,3 +1,39 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:9e23eb038b7099604b7463fb94dcb2ee0d0661cde8f16d0321e3975180bfa62c
-size 1104
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './shortCut.css';
+
+const Breadcrumb = () => {
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter((x) => x);
+
+  if (
+    location.pathname === '/' ||
+    location.pathname === '/login' ||
+    location.pathname === '/register' ||
+    location.pathname === '/dashboard' ||
+    location.pathname === '/update-profile' ||
+    location.pathname === '/projects' ||
+    location.pathname.startsWith('/dashboard/projects/')
+  ) {
+    return null;
+  }
+
+  return (
+    <nav className="breadcrumb">
+      <Link to="/">home</Link>
+      {pathnames.map((value, index) => {
+        const to = `/${pathnames.slice(0, index + 1).join('/')}`;
+        const isLast = index === pathnames.length - 1;
+        return isLast ? (
+          <span key={to}>{decodeURIComponent(value)}</span>
+        ) : (
+          <Link key={to} to={to}>
+            {decodeURIComponent(value)}
+          </Link>
+        );
+      })}
+    </nav>
+  );
+};
+
+export default Breadcrumb;

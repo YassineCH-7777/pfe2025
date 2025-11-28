@@ -1,3 +1,71 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:b9965424eba1d6b7cf60a52212a065db4220267c709a04939271cc959b3df732
-size 1575
+.visualization {
+  width: 100%; /* Utilise toute la largeur disponible */
+  max-width: 1200px; /* Limite la largeur maximale */
+  margin: 0 auto; /* Centre le conteneur */
+  text-align: center;
+}
+
+.canvas-container {
+  position: relative;
+  width: 100%; /* Occupe toute la largeur */
+  height: auto;
+  padding-bottom: 75%; /* Maintient un ratio 4:3 (ajustez si nécessaire) */
+  overflow: hidden;
+}
+
+.canvas-container canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Canvas occupe toute la largeur */
+  height: auto; /* Hauteur automatique pour maintenir le ratio */
+  border: 1px solid #000;
+  transition: transform 0.3s ease;
+}
+
+/* Responsive Styles */
+@media (max-width: 1450px) {
+  .visualization {
+    width: 80%;
+  }
+
+  .canvas-container {
+    padding-bottom: 60%; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .canvas-container canvas {
+    margin-top: 9px;
+    transform: scale(0.9); /* Scale down */
+  }
+}
+
+@media (max-width: 768px) {
+  .visualization {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .canvas-container {
+    padding-bottom: 75%; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .canvas-container canvas {
+    margin-top: 8px;
+    transform: scale(0.8); /* Scale down */
+  }
+}
+
+@media (max-width: 480px) {
+  .visualization {
+    padding: 10px;
+  }
+
+  .canvas-container {
+    padding-bottom: 100%; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .canvas-container canvas {
+    margin-top: 5px;
+    transform: scale(0.7); /* Scale down more */
+  }
+}

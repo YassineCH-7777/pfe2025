@@ -1,3 +1,249 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0477faaa2c4a0f2df85619d8a5c835eaa1f3837f0b932ab1d979cb919e942ecd
-size 4675
+/* Global Styles */
+h1, h2, h3 {
+  color: #333;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.4;
+  margin: 0 0 1.5rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem; /* Reduit pour éviter un trop grand espace */
+  font-weight: 600;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem; /* Espacement coherent */
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem; /* Espacement coherent */
+}
+
+strong {
+  color: #444;
+  font-weight: 600;
+}
+
+/* Layout Components */
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem; /* Espacement uniforme */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.form-content {
+  flex: 2;
+}
+
+.form-content p {
+  margin: 1.5rem 0;
+  line-height: 1.6;
+  color: #555;
+}
+
+.tool-content {
+  flex: 1;
+  padding: 1rem; /* Padding ajouté pour éviter le decalage */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Piece List Styling */
+
+.pieces-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.piece-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Espacement coherent */
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.piece-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  flex: 1 1 calc(20% - 0.5rem); /* Ajustement pour éviter le decalage */
+  max-width: calc(25% - 0.5rem);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.piece-item:hover {
+  transform: translate(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: #d1d5db;
+}
+
+.floating-input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 45px;
+  background-color: transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.floating-label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: white;
+  color: #4A3B2F;
+  padding: 0 5px;
+}
+
+.floating-label.active {
+  top: -12px;
+  font-size: 12px;
+  color: #634c3d;
+}
+
+.floating-input:focus {
+  outline: none;
+  border-color: #4A3B2F;
+  box-shadow: 0 0 0 0.2rem #4A3B2F;
+}
+
+.floating-input:focus + .floating-label {
+  top: -12px;
+  font-size: 12px;
+  color: #4A3B2F;
+}
+
+/* Buttons */
+
+.add-button, .optimize-button, .delete-Panelbutton {
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: #4A3B2F;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.delete-Panelbutton:hover, .add-button:hover, .optimize-button:hover {
+  background-color: #634c3d;
+  transform: scale(1.3);
+}
+
+.delete-Panelbutton {
+  font-size: 0.8rem;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px 10px;
+}
+
+/* Form Styling */
+
+form {
+  margin-bottom: 2rem;
+}
+
+.submit-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  margin-top: 1.5rem; /* Optionnel, pour espacer du contenu au-dessus */
+}
+
+.output-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+  .piece-item {
+    flex: 1 1 calc(25% - 1rem); /* Ajustement pour éviter le decalage */
+    max-width: calc(25% - 1rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 1.5rem; /* Espacement réduit pour mobile */
+  }
+
+  .piece-item {
+    flex: 1 1 calc(33.33% - 1rem); /* Ajustement pour éviter le decalage */
+    max-width: calc(33.33% - 1rem);
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-group label {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .piece-item {
+    flex: 1 1 calc(50% - 1rem); /* Ajustement pour éviter le decalage */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .piece-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem; /* Espacement ajusté pour mobile */
+  }
+}

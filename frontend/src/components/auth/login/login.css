@@ -1,3 +1,136 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0c8945dee0172ecaf5727dd6d26feb1744adc9da556a53f9929c5bec99eeba65
-size 2802
+/* Container principal de la connexion */
+.login-container {
+  max-width: 450px;
+  margin: 4rem auto;
+  padding: 2.5rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+/* Titre */
+.login-container h2 {
+  text-align: center;
+  color: #2c2218;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  font-size: 1.75rem;
+  letter-spacing: -0.5px;
+}
+
+/* Formulaire et inputs */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.login-container form input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: #f9f9f9;
+}
+
+.login-container form input:focus {
+  border-color: #3a2e23;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 59, 47, 0.1);
+  background-color: #ffffff;
+}
+
+.login-container form input::placeholder {
+  color: #9e9e9e;
+}
+
+/* Message d'erreur */
+.login-container .error-message {
+  font-size: 0.9rem;
+  color: #e53935;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: rgba(229, 57, 53, 0.05);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.login-container .success-message {
+  font-size: 0.9rem;
+  color: #2e7d32;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  background-color: rgba(46, 125, 50, 0.05);
+  border-radius: 4px;
+  text-align: center;
+  border-left: 3px solid #2e7d32;
+}
+
+/* Lien vers l'inscription */
+.login-container .register {
+  text-align: start;
+  color: #4A3B2F;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.95rem;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+.login-container .register:hover {
+  color: #2c2218;
+  transform: translateX(2px);
+}
+
+/* Bouton de connexion */
+.login-container form button {
+  width: 100%;
+  padding: 1rem;
+  background-color: #4A3B2F;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.25rem;
+}
+
+.login-container form button:hover {
+  background-color: #3a2e23;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-container form button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.login-container form button:disabled {
+  background-color: #a79c92;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .login-container {
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+}

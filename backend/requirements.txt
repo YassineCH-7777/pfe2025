@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f4e730f7ad4e90aa6799a129ca541db489767257e95837c7dc6cba3b45f6e0e
-size 244
+# Requirements pour l'API et le traitement principal
+flask==2.0.3
+flask-cors==3.0.10
+scikit-learn==1.0.2
+joblib==1.1.0
+
+# Deep Learning (DQN)
+tensorflow==2.8.0
+numpy==1.22.4
+
+# Utilitaires supplémentaires
+requests==2.27.1
+python-dotenv==0.19.2

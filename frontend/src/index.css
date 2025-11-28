@@ -1,3 +1,116 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d50845eb15a6bc82c3b6902683f97f06b928bf3b1dd2d1bf179b87997c640ee4
-size 1766
+@import url("https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css");
+
+/* Animations */
+[data-aos="fade-left"] {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+[data-aos="fade-left"].aos-animate {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-right"] {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+[data-aos="fade-right"].aos-animate {
+  opacity: 1;
+  transform: translateX(-50px);
+}
+
+[data-aos="fade-top"] {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+[data-aos="fade-top"].aos-animate {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+
+[data-aos="fade-bottom"] {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+[data-aos="fade-bottom"].aos-animate {
+  opacity: 1;
+  transform: translateY(-50px);
+}
+
+[data-aos="fade-in"] {
+  opacity: 0;
+}
+
+[data-aos="fade-in"].aos-animate {
+  opacity: 1;
+}
+
+[data-aos="fade-out"] {
+  opacity: 1;
+}
+
+[data-aos="fade-out"].aos-animate {
+  opacity: 0;
+}
+
+/* End Animations */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.app {
+  margin: 0 auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Styles */
+@media (max-width: 1450px) {
+  .app {
+    padding: 1.5rem;
+  }
+
+  body {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 0.5rem;
+  }
+
+  body {
+    font-size: 12px;
+  }
+}

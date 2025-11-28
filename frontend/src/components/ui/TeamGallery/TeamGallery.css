@@ -1,3 +1,80 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:829822678d85d405b20dc3f9d3e29a21833316e19e9e61d50bee4b34d5b9079d
-size 1200
+/* TeamGallery.css */
+.team-section {
+  padding: 48px 0;
+  background-color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.team-member {
+  display: flex;
+  gap: 16px;
+  max-width: 400px;
+  justify-content: center;
+}
+
+.member-avatar {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #99f6e4;
+  overflow: hidden;
+}
+
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-height: 40px;
+}
+
+.member-info h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #4a3b2f;
+  margin: 0;
+}
+
+.member-info p {
+  font-size: 1rem;
+  color: #111827;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.profile-link {
+  font-size: 0.875rem;
+  color: #4a3b2f;
+  text-decoration: none;
+  margin-top: auto;
+}
+
+.profile-link:hover {
+  color: #B79166;
+}
